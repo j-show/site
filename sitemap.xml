@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jshow.org/en/20190612/1319/</loc>
+    
+    <lastmod>2019-06-12T10:46:12.489Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jshow.org/zh/20190612/1319/</loc>
+    
+    <lastmod>2019-06-12T10:16:12.328Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jshow.org/about/index-en.html</loc>
+    
+    <lastmod>2019-06-12T04:36:30.697Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jshow.org/about/index-zh.html</loc>
+    
+    <lastmod>2019-06-12T04:36:10.666Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jshow.org/index.html</loc>
     
     <lastmod>2019-06-11T22:05:35.663Z</lastmod>
@@ -26,20 +54,6 @@
     <loc>https://jshow.org/categories/index-en.html</loc>
     
     <lastmod>2019-06-10T05:08:59.060Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jshow.org/about/index-zh.html</loc>
-    
-    <lastmod>2019-06-10T05:08:59.057Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jshow.org/about/index-en.html</loc>
-    
-    <lastmod>2019-06-10T05:08:59.052Z</lastmod>
     
   </url>
   

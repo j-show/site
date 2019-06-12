@@ -133,6 +133,28 @@ function http (type, url, data, headers) {
 	return result;
 }
 
+function calcTime (dt) {
+	let val = (new Date()).getTime() - parseInt(dt);
+
+	val = parseInt(val / 1000);
+	if (val < 60) return `${val} Seconds`;
+
+	val = parseInt(val / 60);
+	if (val < 60) return `${val} Minutes`;
+
+	val = parseInt(val / 60);
+	if (val < 24) return `${val} Hours`;
+
+	val = parseInt(val / 24);
+	if (val < 31) return `${val} Days`;
+
+	val = parseInt(val / 60);
+	if (val < 12) return `${val} Months`;
+
+	val = parseInt(val / 12);
+	return `${val} Years`;
+}
+
 function analytics_google (id) {
 	window.dataLayer = window.dataLayer || [];
 

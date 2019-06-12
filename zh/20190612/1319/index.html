@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description" content="jShow's Home, share experiences and ideas"><meta name="keywords" content="jShow, jshow, Node.js, nodejs"><meta http-equiv="Expires" content="0"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Cache-control" content="no-cache"><meta http-equiv="Cache" content="no-cache"><title>jShow生态圈概述 - jShow's Home</title><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script><script src="https://www.googletagmanager.com/gtag/js?id=UA-141766789-1" async></script><script src="/images/global.js"></script><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><label class="navi-button light" for="navi">菜单</label><div class="main-navication"><div class="owner"><div class="ml30 slider" id="languager"><a class="selected zh" href="javascript:void(0);" tag="zh">中文</a><div class="lang_block" style="display:none;"><a class="en" href="/en/20190612/1319/" tag="en">English</a><a class="zh" href="/zh/20190612/1319/" tag="zh">中文</a></div></div><a href="/zh/index.html" target="_self"><i class="icon home"></i><span>首页</span></a><a href="https://github.com/j-show/jshow" target="_blank"><i class="icon github"></i><span>Github</span></a><a href="/tags/index-zh.html" target="_self"><i class="icon tag"></i><span>标签</span></a><a href="/categories/index-zh.html" target="_self"><i class="icon category"></i><span>类别</span></a><a href="/about/index-zh.html" target="_self"><i class="icon author"></i><span>关于我们</span></a></div></div><div class="wrapper" id="wrap"><div class="post-header"><div class="background"><img src="/images/post_background.jpg"></div><div class="post-title"><h1 class="title">jShow生态圈概述</h1><ul class="meta"><li><i class="icon author"></i>jshow</li><li><i class="icon clock"></i><script>document.write(calcTime(1560334572328));</script></li><li><i class="icon calendar"></i>June 12, 2019</li></ul></div></div><div class="article-content" style="max-width:800px"><ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#框架特色"><span class="post-toc-number">1.</span> <span class="post-toc-text">框架特色</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#统一算法"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">统一算法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#灵活的扩展"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">灵活的扩展</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#灵活的扩展-1"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">灵活的扩展</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#核心分析"><span class="post-toc-number">2.</span> <span class="post-toc-text">核心分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Widget-外挂工具"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Widget 外挂工具</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#P3-模型"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">P3 模型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#应用管理器-ProjectManage"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">应用管理器 ProjectManage</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#应用实例-Project"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">应用实例 Project</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#协议实例-Profile"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">协议实例 Profile</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插件实例-Plugin"><span class="post-toc-number">2.2.4.</span> <span class="post-toc-text">插件实例 Plugin</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#举个例子"><span class="post-toc-number">2.2.5.</span> <span class="post-toc-text">举个例子</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#后记"><span class="post-toc-number">3.</span> <span class="post-toc-text">后记</span></a></li></ol>
+<h1 id="框架特色"><a href="#框架特色" class="headerlink" title="框架特色"></a>框架特色</h1><h2 id="统一算法"><a href="#统一算法" class="headerlink" title="统一算法"></a>统一算法</h2><p>jShow是一个<strong>开放式工具框架</strong>。他被设计成同时支持<code>WebBrowser</code>、<code>Node.js</code>环境。</p>
+<p>在实际项目中，经常需要用到各种自定义格式化/校验算法，但因为环境加载问题，我们经常需要为前后端分别写不同的文件，这不仅非常麻烦，而且文件的管理和算法的修正都会造成一系列问题。</p>
+<p>现在，<code>jShow</code>就完美的解决了这个问题，通过<code>外挂工具</code>方式，前后端完全可以使用同一个文件，这对于统一前后端的算法非常帮助。</p>
+<blockquote>
+<p>当使用<a href="https://github.com/j-show/jshow-svr" target="_blank" rel="noopener">jshow-svr</a>库来作为后端应用的时候，不需要额外的设置，库会自动导出<code>jShow</code>的<code>WebBrowser</code>版本内容，并自动将挂载的<code>外挂工具</code>导出供前端调用，尽量的减少了冗余代码</p>
+</blockquote>
+<h2 id="灵活的扩展"><a href="#灵活的扩展" class="headerlink" title="灵活的扩展"></a>灵活的扩展</h2><p>开发过复杂项目的朋友，应该都明白。最让人烦恼的不是项目本身的复杂逻辑，而是各种依赖库所存在的隐形陷阱，库与库之间的冲突问题。</p>
+<p>你只有不多的选择：</p>
+<ul>
+<li>替别人进行fix bug，成为一个光荣的代码贡献者</li>
+<li>提交issues，然后等待某人某时解决这个问题</li>
+<li>放弃！重新换个库或自己造个轮子，并祈祷不会出现什么问题</li>
+</ul>
+<p>这时候，你可以尝试使用下<code>jShow</code>的P3(<code>Project-Profile-Plugin</code>) 层级模型。</p>
+<p><code>jShow</code>的P3模型，完全隔离<code>Project</code>之间的影响，以上的问题我们有了个新的解决方式：</p>
+<ul>
+<li>建立<code>Project</code>对象，并把问题库放在对象内部使用，通过<code>Profile</code>提取阶段内容，并插入自身代码</li>
+<li>建立<code>Project</code>对象，只管在内部用最简单的方式实现自己的轮子</li>
+</ul>
+<p>P3模型类似于建立了个虚拟环境，让<code>Project</code>对象之间完全隔离，而不用考虑相互干扰问题。对象间的通讯被抽象成<code>事件驱动模型</code>，确保了数据的安全。</p>
+<blockquote>
+<p>P3模型的核心就是<code>倒水理论</code>，P3模型中的<code>Project</code>就像个水杯，数据就是其中的水，数据之水就这样从一个杯子倒入另一个杯子，最终完成整套业务逻辑</p>
+</blockquote>
+<h2 id="灵活的扩展-1"><a href="#灵活的扩展-1" class="headerlink" title="灵活的扩展"></a>灵活的扩展</h2><p>当然，P3模型能做到的不止上面的修补/隔离工作。它更重要的是让多个不同类型的应用逻辑串联在一起。</p>
+<p>比如，我们可以通过HTTP来建立一个聊天服务，WebSocket来进行聊天内容的通讯。</p>
+<p>这时候数据的流程在HTTP和WebSocket之间来回跳转</p>
+<p>甚至如果希望加入个文件直传功能，就会是HTTP/WebSocket/UDP三者之间的数据流转。</p>
+<p>如果采用原本的插件方式实现，代码将非常冗余，数据的跳转也很混乱。</p>
+<p>P3模型就是为了应对这种环境而诞生的，模型中的<code>Profile</code>对象，可以将业务逻辑抽象成各种协议，通过协议来完成数据的收集和预处理，之后就是我们的<code>倒水理论</code>的工作环境了。</p>
+<blockquote>
+<p>P3模型本身并没有特别区分协议的种类，所以我们完全可以把网络操作、硬件操作、前端路由等，都抽象成协议来进行处理</p>
+</blockquote>
+<blockquote>
+<p><a href="https://github.com/j-show/jshow-socket" target="_blank" rel="noopener">jshow-socket</a>和<a href="https://github.com/j-show/jshow-nano" target="_blank" rel="noopener">jshow-nano</a>分别是网络操作、硬件操作协议抽象的应用案例，之后<code>jShow</code>会致力于丰富各种协议抽象，让编码更轻松。</p>
+</blockquote>
+<h1 id="核心分析"><a href="#核心分析" class="headerlink" title="核心分析"></a>核心分析</h1><blockquote>
+<p>那么这一切如何实现的呢？</p>
+</blockquote>
+<p>jShow采用了WP3(<code>Widget-Project-Profile-Plugin</code>) 层级模型，使用者可以根据需要，选择相应的层级。</p>
+<h2 id="Widget-外挂工具"><a href="#Widget-外挂工具" class="headerlink" title="Widget 外挂工具"></a>Widget 外挂工具</h2><p>这部分很好理解，<code>jShow</code>内置了AMD/CMD加载器，插件通过外挂方式挂载<code>jShow</code>的工具空间中，外全局使用。</p>
+<h2 id="P3-模型"><a href="#P3-模型" class="headerlink" title="P3 模型"></a>P3 模型</h2><p><code>jShow</code>中的P3模型，其实是由应用管理器(<code>ProjectManage</code>)、应用实例(<code>Project</code>)、协议实例(<code>Profile</code>)、插件实例(<code>Plugin</code>)，四部分组成。</p>
+<h3 id="应用管理器-ProjectManage"><a href="#应用管理器-ProjectManage" class="headerlink" title="应用管理器 ProjectManage"></a>应用管理器 <code>ProjectManage</code></h3><p>应用管理器是单例模式，<code>jShow</code>内置应用管理器作为根节点操作，但默认不初始化，需要手动初始化</p>
+<p>应用管理器为所有应用实例提供基础运行环境，并管理应用之间的调度。</p>
+<h3 id="应用实例-Project"><a href="#应用实例-Project" class="headerlink" title="应用实例 Project"></a>应用实例 <code>Project</code></h3><p>应用实例是协议实例的集合，提供协议流转的通道</p>
+<p>生命周期大致类似如下：</p>
+<ul>
+<li>起始：协议事件，提供协议输出数据</li>
+<li>中间：插件处理，数据流转及层层处理</li>
+<li>终止：应用事件，输出处理后数据</li>
+</ul>
+<h3 id="协议实例-Profile"><a href="#协议实例-Profile" class="headerlink" title="协议实例 Profile"></a>协议实例 <code>Profile</code></h3><p>协议实例是模块操作的主体部分，协议实例中不用考虑数据的处理，只考虑如何获取数据。</p>
+<blockquote>
+<p>数据通过什么方式获取，数据如何触发输出事件</p>
+</blockquote>
+<p>推荐形式</p>
+<blockquote>
+<p>协议实例中通过其他库或协议实例来获取数据。并以事件方式输出数据<br>协议实例允许串联，并可以设定多个协议的操作顺序（水杯的先后顺序，可以决定水怎么倒）</p>
+</blockquote>
+<h3 id="插件实例-Plugin"><a href="#插件实例-Plugin" class="headerlink" title="插件实例 Plugin"></a>插件实例 <code>Plugin</code></h3><p>插件实例属于比较特殊的实例，允许被注册在<code>应用管理器</code>、<code>应用实例</code>、<code>协议实例</code>中。</p>
+<p>插件实例负责处理数据，不用考虑数据的来源，只负责根据业务需要进行处理并输出。</p>
+<blockquote>
+<p>插件实例统一以异步方式输出，具体可以参照<code>jShow</code>中的异步操作部分</p>
+</blockquote>
+<h3 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h3><p>我们需要完成一个分布式静态网站项目，用户可以根据统一域名进行访问，应用会自动跳转至究竟的静态网站节点上来加速访问。</p>
+<p>根据需求，我们把模型细化成如下形式：</p>
+<ul>
+<li><code>ProjectManage</code>：串联<code>Project</code>流程和处理顺序<ul>
+<li><code>Project</code><ul>
+<li>用户HTTP访问入口：<ul>
+<li>绑定域名</li>
+<li>获取用户请求信息</li>
+</ul>
+</li>
+<li>网路节点选择：<ul>
+<li>解析用户请求来源</li>
+<li>识别就近网络节点</li>
+<li>转发用户请求</li>
+</ul>
+</li>
+<li>静态网站列表<ul>
+<li>HTTP请求处理</li>
+<li>静态文件输出</li>
+<li>错误状态转向</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>Profile</code><ul>
+<li>域名协议：处理域名请求</li>
+<li>HTTP协议：处理HTTP请求</li>
+<li>文件协议：读取本地文件</li>
+</ul>
+</li>
+<li><code>Plugin</code><ul>
+<li>域名解析</li>
+<li>IP地域解析</li>
+<li>异常解析</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>你看，就是这么方便！通过P3模型可以把整个需求进行拆分，各部分相互独立。不管是多人合作，还是单人开发，都可以很方便的分解需求进行独立编码，任意部分都可以单独进行mocha测试。</p>
+<blockquote>
+<p>后期<code>jShow</code>正在完善基于P3模型的mocha测试模块，可以自动识别P3模型结构，并针对结构进行单元测试、整体测试</p>
+</blockquote>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p><code>jShow</code>项目和<code>jShow</code>生态圈正在积极发展，我们欢迎任何人加入项目。</p>
+<p>你可以提出你的设想，也可以为我们贡献代码。我们会认证考虑你的意见。</p>
+</div><div class="article-meta" style="max-width:800px"><div class="tags"><i class="icon tag"></i><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/explain/">explain</a><span class="tag-list-count">2</span></li></ul></div><div class="categories"><i class="icon category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/jShow/">jShow</a><span class="category-list-count">2</span></li></ul></div></div><ul class="navication"><li class="home"><a href="/"><i class="icon home"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/j-show/jshow" title="Github" target="_blank"><i class="icon github"></i></a></li><li><a href="https://twitter.com/jShow_OS" title="Twitter" target="_blank"><i class="icon twitter"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2019 jShow's Home<br><script type="text/javascript">analytics_google("UA-141766789-1")</script><script type="text/javascript">analytics_cnzz("1277700064")</script><small>POWER BY<a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY<a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><div id="dialog" style="display:none;"></div><script type="text/javascript">$(function () { $("#wrap").addClass("done"); $("#languager").Languager(); });</script></body></html>
